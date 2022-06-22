@@ -1,0 +1,26 @@
+DROP TABLE Jdbc_Hotel CASCADE CONSTRAINTS;
+
+
+CREATE TABLE Jdbc_Hotel(
+orderId Number(4) CONSTRAINT jdbc_order_id_pk PRIMARY KEY,
+customerName VARCHAR2(50) CONSTRAINT jdbc_name NOT NULL,
+orderedItem VARCHAR2(50) CONSTRAINT jdbc_orderItem_nnull NOT NULL,
+totalBillAmount NUMBER(7,2) CONSTRAINT jdbc_totalBillAmount_nnull NOT NULL,
+contactNo NUMBER(10) CONSTRAINT jdbc_contactNumber_unique UNIQUE,
+orderedBranch VARCHAR2(20) CONSTRAINT jdbc_branch NOT NULL
+);
+
+
+
+INSERT INTO JDBC_HOTEL VALUES(1001,'Jack','Pizza','305.00','9840231273','London');
+INSERT INTO JDBC_HOTEL VALUES(1002,'Robert','Fried Rice','107.00','7412523147','Paris');
+INSERT INTO JDBC_HOTEL VALUES(1003,'Angelina','Tortilla','155.00','8623547889','New York');
+INSERT INTO JDBC_HOTEL VALUES(1004,'Mary','Pasta','240.00','9840231778','London');
+INSERT INTO JDBC_HOTEL VALUES(1005,'Wilson','Sandwich','146.00','7534201445','Paris');
+INSERT INTO JDBC_HOTEL VALUES(1006,'Princy','Pizza','305.00','8896314775','Paris');
+INSERT INTO JDBC_HOTEL VALUES(1007,'Jim','Fried Rice','107.00','9634589668','New York');
+INSERT INTO JDBC_HOTEL VALUES(1008,'Starc','Pasta','240.00','7965234112','London');
+
+
+SELECT * FROM JDBC_HOTEL;
+
